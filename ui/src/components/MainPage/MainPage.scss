@@ -1,0 +1,68 @@
+.mainImageSection {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+
+  .headline {
+    text-align: center;
+    animation-name: fromBottomToTop;
+    animation-duration: 1s;
+    position: absolute;
+    font-size: 500%;
+    font-family: FuckingFont, sans-serif;
+    left: 25%;
+    top: 25%;
+    right: 25%;
+    color: white;
+    text-shadow: 4px 4px 5px black;
+  }
+}
+
+.tabs {
+  width: 100%;
+  height: auto;
+  text-align: center;
+
+  .squareText {
+    padding: 5px;
+  }
+
+  .tab {
+    width: 24.3%;
+    height: 40%;
+    text-align: center;
+    background-color: white;
+    display: inline-block;
+    font-size: 150%;
+
+  }
+
+  .tab img {
+    width: 60%;
+    height: auto;
+    display: block;
+    position: relative;
+    left: 20%;
+    top: 10%;
+
+  }
+}
+
+@keyframes fromBottomToTop {
+  from {
+    color: black;
+    transform: scale(0);
+    top: 60%;
+    opacity: 0;
+  }
+
+  to {
+    color: white;
+    opacity: .7;
+    top: 25%;
+    transform: scale(1);
+  }
+
+}
