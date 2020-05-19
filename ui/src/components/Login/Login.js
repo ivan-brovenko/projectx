@@ -1,7 +1,7 @@
 import React from 'react';
-import './Registration.scss';
-import {IS_MAIN, IS_REGISTRATION} from "../../redux/actionNames";
 import {connect} from "react-redux";
+import {IS_LOGIN} from "../../redux/actionNames";
+import {Form, Button} from 'react-bootstrap'
 
 
 @connect(
@@ -12,30 +12,27 @@ import {connect} from "react-redux";
         dispatch
     })
 )
-class Registration extends React.Component {
-
+class Login extends React.Component {
     componentDidMount() {
-        this.props.dispatch({type: IS_REGISTRATION})
+        this.props.dispatch({type: IS_LOGIN})
     }
 
     render() {
         return (
             <div className="content">
-                <h1>REGISTRATION</h1>
-                <form id="regForm">
+                <h1>LOG IN</h1>
+                <Form>
                     <label>USERNAME</label>
                     <input type="text" name="username"/>
                     <label>E-MAIL</label>
                     <input type="text" name="email"/>
                     <label>PASSWORD</label>
                     <input type="password" name="password"/>
-                    <label>REPEAT PASSWORD</label>
-                    <input type="password" name="rePassword"/>
-                    <input className="form bt" type="submit" value="SIGN UP"/>
-                </form>
+                    <input className="form bt" type="submit" value="LOG IN"/>
+                </Form>
             </div>
         );
     }
 }
 
-export default Registration;
+export default Login;

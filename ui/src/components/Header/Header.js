@@ -1,8 +1,7 @@
 import React from 'react';
 import './Header.scss'
 import {connect} from "react-redux";
-import RegistrationLink from "./RegistrationLink";
-import LogInLink from "./LogInLink";
+import {LOGIN, MAIN_PAGE, REGISTRATION} from "../../../routesConfig";
 
 @connect(
     state => ({
@@ -13,24 +12,18 @@ import LogInLink from "./LogInLink";
     })
 )
 class Header extends React.Component {
+
     render() {
+        const isPage = (isPage, component) => {
+            return (!isPage) ? component : ''
+        };
+
         return (
             <header>
-                <label className="logo">STUD.UA</label>
-                {
-                    (!this.props.linkReducer.isRegistration) ? <RegistrationLink/> : ''
-                }
-                {
-                    (!this.props.linkReducer.isRegistration) ? <LogInLink/> : ''
-                }
-                {
-                    (!this.props.linkReducer.isMain) ? <a href="/">MAIN PAGE</a>: ''
-                }
-                <select>
-                    <option value="/stud.ua-en">EN</option>
-                    <option value="/stud.ua-ru">RU</option>
-                    <option value="/stud.ua-ua">UA</option>
-                </select>
+                <label className="logo">FCK</label>
+                {isPage(this.props.linkReducer.isRegistration, <a href={REGISTRATION}>SIGN UP</a>)}
+                {isPage(this.props.linkReducer.isMain, <a href={MAIN_PAGE}>MAIN PAGE</a>)}
+                {isPage(this.props.linkReducer.isLogin, <a href={LOGIN}>LOG IN</a>)}
             </header>
         );
     }

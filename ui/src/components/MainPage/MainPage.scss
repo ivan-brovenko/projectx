@@ -15,38 +15,32 @@
     left: 25%;
     top: 25%;
     right: 25%;
-    color: white;
-    text-shadow: 4px 4px 5px black;
-  }
-}
-
-.tabs {
-  width: 100%;
-  height: auto;
-  text-align: center;
-
-  .squareText {
-    padding: 5px;
+    color: #090909;
+    text-shadow: 4px 4px 5px #ff2a34;
   }
 
-  .tab {
-    width: 24.3%;
-    height: 40%;
+  .openDatabase {
     text-align: center;
-    background-color: white;
-    display: inline-block;
-    font-size: 150%;
-
+    position: absolute;
+    font-size: 300%;
+    font-family: FuckingFont, sans-serif;
+    left: 25%;
+    top: 39%;
+    right: 25%;
+    color: #090909;
+    text-shadow: 4px 4px 5px #67ff0c;
   }
 
-  .tab img {
-    width: 60%;
-    height: auto;
-    display: block;
-    position: relative;
-    left: 20%;
-    top: 10%;
-
+  .description {
+    text-align: center;
+    position: absolute;
+    font-size: 160%;
+    font-family: FuckingFont, sans-serif;
+    left: 25%;
+    top: 60%;
+    right: 25%;
+    color: #090909;
+    text-shadow: 4px 4px 5px #5a70ff;
   }
 }
 
@@ -59,7 +53,7 @@
   }
 
   to {
-    color: white;
+    color: #090909;
     opacity: .7;
     top: 25%;
     transform: scale(1);
